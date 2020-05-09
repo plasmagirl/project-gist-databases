@@ -2,7 +2,6 @@ from .models import Gist
 from datetime import datetime, date
 import sqlite3
 
-db_conn = conn = sqlite3.connect('tests/populated_gists_database.db')
 def search_gists(db_conn, **kwargs):
    cursor = db_conn.cursor()
    if len(kwargs) == 0:
@@ -29,3 +28,9 @@ def search_gists(db_conn, **kwargs):
        result.append(Gist(row))
        print(result)
    return result
+
+
+
+
+      
+
